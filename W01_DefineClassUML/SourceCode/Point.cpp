@@ -22,3 +22,10 @@ double Point::calculateDistance(Point a)
 
     return distance;
 }
+
+double Point::calculateSquareDistance(Point a)
+{
+    double distance = (x - a.x) * (x - a.x) + (y - a.y) * (y - a.y);
+
+    return distance;
+}
