@@ -39,22 +39,19 @@ int Date::daysInMonths()
     return days;
 }
 
-// Main function to convert a date to the number of days since January 1, year 0
 void Date::dateToDays() {
     
-    numberOfDays = daysInYears(); // Days from complete years
-    numberOfDays += daysInMonths(); // Days from complete months
-    numberOfDays += day; // Add days of the current month
+    numberOfDays = daysInYears(); 
+    numberOfDays += daysInMonths(); 
+    numberOfDays += day; 
 }
 
 void Date::daysToDate() {
     int tmp = numberOfDays;
     year = 1;
     
-    // Subtract days for each complete year
     while (tmp >= daysInYears()) 
     {
-        // std::cout << tmp << " " << year << " " << daysInYears() << "\n";
         year++;
     }
     year--;
@@ -84,9 +81,7 @@ void Date::input()
     std::cin >> year;
 
     dateToDays();
-    // daysToDate();
 
-    // std::cout << numberOfDays << "\n";
     std::cin.ignore();
 }
 
