@@ -110,7 +110,8 @@ int main()
     s1.inputGrade();
     s1.outputAverageGrade();
     s1.isFullyExcelence();
-
+    cin.ignore();
+    
     cout << "Press any key to exit...";
 
     cin.get();
