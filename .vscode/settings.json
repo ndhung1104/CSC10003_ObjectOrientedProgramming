@@ -43,6 +43,9 @@
         "xtr1common": "cpp",
         "xutility": "cpp",
         "string": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "deque": "cpp",
+        "ranges": "cpp",
+        "span": "cpp"
     }
 }
