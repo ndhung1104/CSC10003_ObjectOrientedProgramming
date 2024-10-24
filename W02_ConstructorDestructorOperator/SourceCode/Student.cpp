@@ -33,12 +33,6 @@ Student::~Student()
 
 Student::Student(const Student& s)
 {
-    if (studentId)
-        delete [] studentId;
-    if (fullname)
-        delete [] fullname;
-    if (address)
-        delete [] address;
     
     this->studentId = new char[strlen(s.studentId) + 1];
     this->fullname = new char[strlen(s.fullname) + 1];
@@ -53,6 +47,16 @@ Student& Student::operator=(const Student& s)
 {
     if (this == &s)
         return *this;
+
+    if (studentId)
+        delete [] studentId;
+    if (fullname)
+        delete [] fullname;
+    if (address)
+        delete [] address;
+    this->studentId = new char[strlen(s.studentId) + 1];
+    this->fullname = new char[strlen(s.fullname) + 1];
+    this->address = new char[strlen(s.address) + 1];
     
     this->studentId = s.studentId;
     this->fullname = s.fullname;
