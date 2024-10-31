@@ -1,0 +1,18 @@
+CS101
+Intro to Computer Science
+5
+23127001
+9
+Nguyen Van A
+23127002
+8
+Nguyen Van B
+23127003
+7
+Nguyen Van C
+123466
+5
+Nguyen Fang
+23127004
+4
+Nguyen Van D

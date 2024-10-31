@@ -46,6 +46,10 @@
         "stack": "cpp",
         "deque": "cpp",
         "ranges": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "vector": "cpp",
+        "algorithm": "cpp",
+        "fstream": "cpp",
+        "optional": "cpp"
     }
 }
