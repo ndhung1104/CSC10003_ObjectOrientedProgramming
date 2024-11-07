@@ -17,4 +17,5 @@ public:
     void getEmployeeInfo();
     double calculateSalary();
     void printOut();
+    std::string getFullname();
 };

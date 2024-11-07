@@ -15,5 +15,6 @@ public:
     void getEmployeeInfo();
     double calculateSalary();
     void printOut();
+    using Employee::getFullname;
 };
 

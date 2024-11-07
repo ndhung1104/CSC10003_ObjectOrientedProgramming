@@ -1,6 +1,7 @@
 #include "ManagerEmployee.h"
 #include "ManufacturingEmployee.h"
 #include "OfficeEmployee.h"
+#include "Company.h"
 
 int main()
 {
@@ -13,7 +14,7 @@ int main()
     e5.printOut(); std::cout << "\n\n";
 
     std::cout << "Initialize 5 office employees with different constructors: \n";
-    OfficeEmployee oe1("Nguyen Van A", 2024, 1000), oe2("Nguyen Van A", 2024, 1000, 30), oe3("Nguyen Van A", 2024, 1000, 30, 5000), oe4, oe5(oe1);
+    OfficeEmployee oe1("Nguyen Van B", 2024, 1000), oe2("Nguyen Van C", 2024, 1000, 30), oe3("Nguyen Van D", 2024, 1000, 30, 5000), oe4, oe5(oe1);
     oe1.printOut(); std::cout << "\n";
     oe2.printOut(); std::cout << "\n";
     oe3.printOut(); std::cout << "\n";
@@ -21,7 +22,7 @@ int main()
     oe5.printOut(); std::cout << "\n\n";
 
     std::cout << "Initialize 5 manufacturing employees with different constructors: \n";
-    ManufacturingEmployee me1("Nguyen Van A", 2024, 1000), me2("Nguyen Van A", 2024, 1000, 30), me3("Nguyen Van A", 2024), me4, me5(me1);
+    ManufacturingEmployee me1("Nguyen Van E", 2024, 1000), me2("Nguyen Van F", 2024, 1000, 30), me3("Nguyen Van G", 2024), me4, me5(me1);
     me1.printOut(); std::cout << "\n";
     me2.printOut(); std::cout << "\n";
     me3.printOut(); std::cout << "\n";
@@ -29,7 +30,7 @@ int main()
     me5.printOut(); std::cout << "\n\n";
 
     std::cout << "Initialize 5 manager employees with different constructors: \n";
-    ManagerEmployee mnge1("Nguyen Van A", 2024, 1000), mnge2("Nguyen Van A", 2024, 1000, 3), mnge3("Nguyen Van A", 2024, 1000, 3, 1999), mnge4, mnge5(mnge1);
+    ManagerEmployee mnge1("Nguyen Van H", 2024, 1000), mnge2("Nguyen Van I", 2024, 1000, 3), mnge3("Nguyen Van J", 2024, 1000, 3, 1999), mnge4, mnge5(mnge1);
     mnge1.printOut(); std::cout << "\n";
     mnge2.printOut(); std::cout << "\n";
     mnge3.printOut(); std::cout << "\n";
@@ -41,5 +42,18 @@ int main()
     e4.printOut(); std::cout << "\n\n";
     std::cout << "Calculate employees 4 salary and print out the result: \n";
     std::cout << e4.calculateSalary() << "\n";
+
+    std::cout << "\nCreate company ABC and input all the above employee into the company: \n";
+    Company company("ABC");
+    company.addEmployee(oe1); company.addEmployee(oe2); company.addEmployee(oe3); company.addEmployee(oe4); company.addEmployee(oe5);
+    company.addEmployee(me1); company.addEmployee(me2); company.addEmployee(me3); company.addEmployee(me4); company.addEmployee(me5);
+    company.addEmployee(mnge1); company.addEmployee(mnge2); company.addEmployee(mnge3); company.addEmployee(mnge4); company.addEmployee(mnge5);
+
+    std::cout << "\nPrint out the list of employee: \n";
+    company.printEmployeeList();
+    std::cout << "\nThe total salary of the company is: " << company.calculateTotalSalary() << "\n";
+    std::cout << "Find the employee with the name Nguyen Van B in the company will result in: \n";
+    company.findEmployee("Nguyen Van B");
+
     return 0;
 }

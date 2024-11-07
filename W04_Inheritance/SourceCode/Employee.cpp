@@ -15,6 +15,11 @@ Employee::Employee(const Employee& emp)
     basicSalary = emp.basicSalary;
 }
 
+std::string Employee::getFullname()
+{
+    return this->fullname;
+}
+
 void Employee::printOut()
 {
     std::cout << fullname << " " << startYear << " " << basicSalary << " ";
