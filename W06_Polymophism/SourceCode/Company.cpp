@@ -114,6 +114,38 @@ bool Company::findEmployee(std::string fullname)
     return found;
 }
 
+
+bool Company::findEmployeeCode(std::string employeeCode)
+{
+    bool found = false;
+
+    for (int i = 0; i < employeeList.size(); i++)
+        if (employeeCode == employeeList[i]->getEmployeeCode())
+            {
+                employeeList[i]->printOut();
+                std::cout << "\n";
+                found = true;
+            }
+    
+    return found;
+}
+
+bool Company::findEmployeeWithBirthMonth(int month)
+{
+    bool found = false;
+
+    for (int i = 0; i < employeeList.size(); i++)
+        if (month == employeeList[i]->getEmployeeBirthMonth())
+            {
+                employeeList[i]->printOut();
+                std::cout << "\n";
+                found = true;
+            }
+    
+    return found;
+}
+
+
 void Company::addEmployee(ManagerEmployee& employee)
 {
     Employee* emp = &employee;

@@ -24,6 +24,8 @@ public:
     void printEmployeeList();
     double calculateTotalSalary();
     bool findEmployee(std::string fullname);
+    bool findEmployeeCode(std::string employeeCode);
+    bool findEmployeeWithBirthMonth(int month);
     void addEmployee(ManagerEmployee& employee);
     void addEmployee(ManufacturingEmployee& employee);
     void addEmployee(OfficeEmployee& employee);    

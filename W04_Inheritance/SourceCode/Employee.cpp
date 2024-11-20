@@ -13,6 +13,8 @@ Employee::Employee(const Employee& emp)
     fullname = emp.fullname;
     startYear = emp.startYear;
     basicSalary = emp.basicSalary;
+    birthMonth = emp.birthMonth;
+    employeeCode = emp.employeeCode;
 }
 
 std::string Employee::getFullname()
@@ -20,9 +22,14 @@ std::string Employee::getFullname()
     return this->fullname;
 }
 
+std::string Employee::getEmployeeCode()
+{
+    return this->employeeCode;
+}
+
 void Employee::printOut()
 {
-    std::cout << fullname << " " << startYear << " " << basicSalary << " ";
+    std::cout << fullname << " " << startYear << " " << basicSalary << " " << employeeCode << " " << birthMonth << " ";
 }
 
 double Employee::calculateSalary()
@@ -41,4 +48,10 @@ void Employee::getEmployeeInfo()
     std::cout << "\nInput basic salary: \n";
     getline(std::cin, tmp);
     basicSalary = std::stod(tmp);
+    std::cout << "\nInput employee code: \n";
+    getline(std::cin, tmp);
+    employeeCode = std::stod(tmp);
+    std::cout << "\nInput birth month: \n";
+    std::cin >> birthMonth;
+    std::cin.ignore();
 }

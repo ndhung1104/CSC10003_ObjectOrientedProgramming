@@ -8,6 +8,8 @@ private:
     std::string fullname;
     int startYear;
     double basicSalary;
+    std::string employeeCode;
+    int birthMonth;
 public:
     Employee();
     Employee(const std::string& fullname, int startYear, double basicSalary);
@@ -18,4 +20,5 @@ public:
     double calculateSalary();
     void printOut();
     std::string getFullname();
+    std::string getEmployeeCode();
 };

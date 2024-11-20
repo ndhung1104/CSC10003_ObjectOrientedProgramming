@@ -66,12 +66,26 @@ int main()
 
     std::cout << "\nFind the average salary in the company will result in: " << company.calculateAverageSalary() << "\n";
 
-    // std::cout << "\nEnter: \n";
-    // company.findEmployeeWithSalaryBelow(3000000);
+    std::cout << "\nFind the employee with the salary < 3000000 in the company will result in: \n";
+    company.findEmployeeWithSalaryBelow(3000000);
 
-    // std::cout << "\nFind the employee with the salary < 3000000 in the company will result in: \n";
-    // company.findEmployeeWithSalaryBelow(3000000);
+    std::cout << "\nInput employee code to find: ";
+    std::string employeeCode;
+    getline(std::cin, employeeCode);
 
+    if (!company.findEmployeeCode(employeeCode))
+        std::cout << "There isn't any employee with employee code " << employeeCode << " in this company!\n";
+    
+    std::cout << "\nInput employee fullname to find: ";
+    std::string employeeFullname;
+    getline(std::cin, employeeFullname);
+
+    if (!company.findEmployee(employeeFullname))
+        std::cout << "There isn't any employee with fullname " << employeeFullname << " in this company!\n";    
+
+    std::cout << "\nFind the employee with the birthday in May in this company will result in: \n";
+    if (!company.findEmployeeWithBirthMonth(5))
+        std::cout << "There isn't any employee with the birthday in May in this company!\n";    
 
     return 0;
 }

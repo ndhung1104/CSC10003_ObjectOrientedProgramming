@@ -20,5 +20,7 @@ public:
     virtual double calculateSalary();
     virtual void printOut();
     std::string getFullname();
+    std::string getEmployeeCode();
+    int getEmployeeBirthMonth();
     virtual int getEmployeeType() = 0;
 };

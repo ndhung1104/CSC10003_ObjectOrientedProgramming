@@ -22,6 +22,16 @@ std::string Employee::getFullname()
     return this->fullname;
 }
 
+std::string Employee::getEmployeeCode()
+{
+    return this->employeeCode;
+}
+
+int Employee::getEmployeeBirthMonth()
+{
+    return this->birthMonth;
+}
+
 void Employee::printOut()
 {
     std::cout << fullname << " " << startYear << " " << basicSalary << " ";
