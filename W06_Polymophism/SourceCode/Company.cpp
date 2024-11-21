@@ -8,19 +8,18 @@ void Company::inputEmployee()
     while (true)
     {
         std::cout << "Input employee:\n1.Manager\n2.Manufacturing\n3.Office\nEnter any other key to exit\nYour input: ";
-        char tmp;
+        int tmp;
         std::cin >> tmp;
         std::cin.ignore();
         Employee* employee;
-        if (tmp < '1' || tmp > '3')
-            break;
-        if (tmp == '1')
+        if (tmp == 1)
             employee = new ManagerEmployee();
-        else if (tmp == '2')
+        else if (tmp == 2)
             employee = new ManufacturingEmployee();
-        else
+        else if (tmp == 3)
             employee = new OfficeEmployee();
-
+        else
+            break;
         employee->getEmployeeInfo();
 
         employeeList.push_back(employee);
@@ -212,7 +211,7 @@ void Company::findEmployeeWithSalaryBelow(double salary)
     for (int i = 0; i < employeeList.size(); i++)
         if (employeeList[i]->calculateSalary() < salary)
         {
-            employeeList[i]->getEmployeeInfo();
+            employeeList[i]->printOut();
             std::cout << "\n";
         }
 }

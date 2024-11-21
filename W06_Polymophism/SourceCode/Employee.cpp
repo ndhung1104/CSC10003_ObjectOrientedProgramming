@@ -34,7 +34,7 @@ int Employee::getEmployeeBirthMonth()
 
 void Employee::printOut()
 {
-    std::cout << fullname << " " << startYear << " " << basicSalary << " ";
+    std::cout << fullname << " " << employeeCode << " " << startYear << " " << birthMonth << " " << basicSalary << " ";
 }
 
 double Employee::calculateSalary()
