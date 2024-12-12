@@ -1,4 +1,5 @@
 #include "PaymentSystem.h"
+#include "Dragon.h"
 
 int main() {
     std::cout << "Bai 1..................\n";
@@ -26,6 +27,30 @@ int main() {
     std::cout << "\nTesting Zalopay Payment:" << std::endl;
     order.setPaymentMethod(&zalopayPayment);
     order.pay();
+
+
+    std::cout << "\nBai 2.................\n";
+
+    Dragon ABC("ABC", 50, 30, 100, 5);
+    std::cout << "\nInitialized dragon ABC with 50 damage, 30 defense, 100 hp, and level 5\n\n";
+    ABC.setState(new NormalState());
+    ABC.calculateCombatPower();
+    ABC.attack();
+    ABC.move();
+
+    std::cout << "\n";
+
+    ABC.setState(new RageState());
+    ABC.calculateCombatPower();
+    ABC.attack();
+    ABC.move();
+
+    std::cout << "\n";
+
+    ABC.setState(new DefensiveState());
+    ABC.calculateCombatPower();
+    ABC.attack();
+    ABC.move();
 
     return 0;
 }
